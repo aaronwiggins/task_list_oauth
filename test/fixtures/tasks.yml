@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_on: 2015-06-19
+  due_on: 2015-06-19
+  completed: false
+  order_number: 1
+
+two:
+  name: MyString
+  start_on: 2015-06-19
+  due_on: 2015-06-19
+  completed: false
+  order_number: 1

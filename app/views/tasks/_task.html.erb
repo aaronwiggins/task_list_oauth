@@ -1,0 +1,17 @@
+<tr data-item-id="<%= "#{task.id}" %>" class="item">
+  <td id="name<%= task.id %>"><%= task.name %></td>
+  <% if task.start_on != nil && task.due_on != nil %>
+    <td id="start_on<%= task.id %>"><%= task.start_on.strftime("%B %e, %Y") %></td>
+    <td id="due_on<%= task.id %>"><%= task.due_on.strftime("%B %e, %Y") %></td>
+  <% else %>
+    <td id="start_on<%= task.id %>"><%= task.start_on %></td>
+    <td id="due_on<%= task.id %>"><%= task.due_on %></td>
+  <% end %>
+  <td id="completed<%= task.id %>">
+    <%= form_for task, remote: true do |f| %>
+      <%= f.check_box :completed, class: "complete-box" %>
+    <% end %>
+  </td>
+  <td><%= link_to 'Edit', edit_task_path(task), class: "btn btn-info" %></td>
+  <td><%= link_to 'Destroy', task, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %></td>
+</tr>
