@@ -242,9 +242,6 @@ Devise.setup do |config|
   # for github
   config.omniauth :github, ENV['CLASS_GITHUB_ID'], ENV['CLASS_GITHUB_SECRET']
   # for fitbit
-  # Rails.application.config.middleware.use OmniAuth::Builder do
-  #   provider :fitbit, ENV['FITBIT_KEY'], ENV['FITBIT_SECRET']
-  # end
   config.omniauth :fitbit, ENV["FITBIT_KEY"], ENV["FITBIT_SECRET"]
 
   # ==> Warden configuration

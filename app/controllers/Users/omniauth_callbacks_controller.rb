@@ -1,17 +1,6 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
-  # def github
-  #   user = User.from_omniauth(request.env["omniauth.auth"])
-  #
-  #   if user.persisted?
-  #     flash.notice = "Signed in!"
-  #     sign_in_and_redirect user
-  #   else
-  #     session["devise.user_attributes"] = user.attributes
-  #     redirect_to new_user_registration_url
-  #   end
-  # end
 
   def all
     user = User.from_omniauth(request.env["omniauth.auth"])
@@ -24,7 +13,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-  alias_method :twitter, :all
+  alias_method :fitbit, :all
   alias_method :github, :all
 
   # You should also create an action method in this controller like this:
