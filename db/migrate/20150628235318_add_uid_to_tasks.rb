@@ -1,5 +1,5 @@
 class AddUidToTasks < ActiveRecord::Migration
   def change
-    add_column :tasks, :uid, :string
+    add_column :tasks, :user_id, :string
   end
 end

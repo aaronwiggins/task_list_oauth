@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
+gem 'omniauth-github'
+# gem 'omniauth-github'
 gem 'devise'
 #for sortable
   gem 'ranked-model'

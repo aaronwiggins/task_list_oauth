@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150629174858) do
     t.integer  "order_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "uid"
+    t.string   "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(version: 20150629174858) do
     t.string   "confirmation_token"
     t.string   "remember_token"
     t.string   "uid"
+    t.string   "validic_id"
     t.string   "token"
-    t.string   "pid"
+    t.string   "provider"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "encrypted_password",     default: "", null: false

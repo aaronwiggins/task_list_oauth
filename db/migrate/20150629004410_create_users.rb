@@ -6,8 +6,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :confirmation_token
       t.string :remember_token
       t.string :uid
+      t.string :validic_id
       t.string :token
-      t.string :pid
+      t.string :provider
 
       t.timestamps null: false
     end

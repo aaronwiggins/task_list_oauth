@@ -9,7 +9,9 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <%= link_to "logout", session_logout_path if session[:uid] %>
+  <% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <% end %>
 <%= yield %>
 
 </body>
